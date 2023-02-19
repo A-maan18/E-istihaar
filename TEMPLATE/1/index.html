@@ -1,1 +1,270 @@
+<html>
+<head>
+	<title>E-ISTIHAAR</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/scroll.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/column_scroll.css">
+	<link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="css/thin_scroll.css">
+	<link rel="stylesheet" type="text/css" href="css/theme.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" type='text/css'>
+	<meta name="description" content="Online document editor like interface to create and save Resume">
+	<meta name="keywords" content="resume,cv,maker,creator,generator,nitw,warangal,nit warangal,projects,computer science">
+</head>
+
+<body style="background-color: black;">
+<div style="background-color: black;" class="container-fluid">
+	<div style="background-color: black;" class="row">
+		<div style="background-color: black;" class="col-sm-3 no-print" id="left">
+			<div style="background-color: black;" id="panel">
+					<h3 class="text-center" data-toggle="modal">E-Pamphlet</h3>
+             <!--   <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#usageModal">VIEW INSTRUCTIONS</button> -->
+				<button style="background-color: #301934;outline-color: #301934;border-color: white;"class="btn btn-block btn-success" onclick="window.print()">PRINT AS PDF</button>
+
+				<hr>
+
+				<h4 class="text-center">Template settings</h4>
+				<button id="defaultTemplateBtn" class="btn btn-block btn-danger" onclick="template('default');">Use Basic template</button>
+				<button id="customTemplateBtn" class="btn btn-block btn-default" onclick="template('custom');">Use custom template</button>
+				<h5>
+					Semester
+					<div class="toggle-button">
+						<div class="toggle-option" data-toggle="minor" id="minorShow">Show</div>
+						<div class="toggle-option selected" data-toggle="minor" id="minorHide">Hide</div>
+					</div>
+				</h5>
+				<h5>
+					Contact lines
+					<div class="toggle-button">
+						<div class="toggle-option" data-toggle="contact" id="contact3">2</div>
+						<div class="toggle-option selected" data-toggle="contact" id="contact4">3</div>
+						<div class="toggle-option" data-toggle="contact" id="contact5">4</div>
+					</div>
+				</h5>
+				<h5>
+					Horizontal margin
+					<div class="toggle-button">
+						<div class="toggle-option" data-toggle="margin" id="margin1">1</div>
+						<div class="toggle-option" data-toggle="margin" id="margin2">2</div>
+						<div class="toggle-option" data-toggle="margin" id="margin3">3</div>
+						<div class="toggle-option selected" data-toggle="margin" id="margin4">4</div>
+						<div class="toggle-option" data-toggle="margin" id="margin5">5</div>
+						<div class="toggle-option" data-toggle="margin" id="margin6">6</div>
+					</div>
+				</h5>
+				<h5>
+					Line spacing
+					<div class="toggle-button">
+						<div class="toggle-option" data-toggle="line" id="line1">1</div>
+						<div class="toggle-option" data-toggle="line" id="line2">2</div>
+						<div class="toggle-option" data-toggle="line" id="line3">3</div>
+						<div class="toggle-option selected" data-toggle="line" id="line4">4</div>
+						<div class="toggle-option" data-toggle="line" id="line5">5</div>
+						<div class="toggle-option" data-toggle="line" id="line6">6</div>
+					</div>
+				</h5>
+				<h5>
+					Center column no.
+					<div class="toggle-button">
+						<div class="toggle-option multi-select" data-toggle="column" id="column1">1</div>
+						<div class="toggle-option multi-select" data-toggle="column" id="column2">2</div>
+						<div class="toggle-option multi-select" data-toggle="column" id="column3">3</div>
+						<div class="toggle-option multi-select" data-toggle="column" id="column4">4</div>
+					</div>
+				</h5>
+
+				<br>
+
+				<div id="customTemplateOptions">
+					<h5>
+						Font type
+						<div class="toggle-button">
+							<div class="toggle-option" data-toggle="font" id="fontVerdanaSans">1</div>
+							<div class="toggle-option" data-toggle="font" id="fontMonospace">2</div>
+							<div class="toggle-option" data-toggle="font" id="fontRoboto">3</div>
+							<div class="toggle-option selected" data-toggle="font" id="fontDroid">4</div>
+						</div>
+					</h5>
+					<h5>
+						Title case
+						<div class="toggle-button">
+							<div class="toggle-option selected" data-toggle="case" id="caseNormal">Default</div>
+							<div class="toggle-option" data-toggle="case" id="caseUpper">Uppercase</div>
+						</div>
+					</h5>
+					<h5>
+						Title style
+						<div class="toggle-button">
+							<div class="toggle-option selected" data-toggle="title" id="titleRuled">Ruled</div>
+							<div class="toggle-option" data-toggle="title" id="titleShaded">Shaded</div>
+						</div>
+					</h5>
+					<h5>
+						Title rule position
+						<div class="toggle-button">
+							<div class="toggle-option selected" data-toggle="rule" id="ruleAbove">Above title</div>
+							<div class="toggle-option" data-toggle="rule" id="ruleBelow">Below title</div>
+						</div>
+					</h5>
+					<br>
+					<h5>
+						Image
+						<div class="toggle-button">
+							<div class="toggle-option selected" data-toggle="image" id="imageShow">Show</div>
+							<div class="toggle-option" data-toggle="image" id="imageHide">Hide</div>
+						</div>
+					</h5>
+					<h5>
+						Table border
+						<div class="toggle-button">
+							<div class="toggle-option selected" data-toggle="table" id="tableShow">Show</div>
+							<div class="toggle-option" data-toggle="table" id="tableHide">Hide</div>
+						</div>
+					</h5>
+					<br>
+				</div>
+
+				<hr>
+
+				<h4 class="text-center">Lists and points</h4>
+				<button style="background-color: white; color: black; border-color: white;" class="btn btn-block btn-xs btn-success" onclick="insertList();">+ Insert sub-list</button>
+				<button style="background-color: white; color: black; border-color: white;" class="btn btn-block btn-xs btn-warning" onclick="decreaseIndent();">&lt;&lt; Decrese indentation</button>
+				<button style="background-color: white; color: black; border-color: white;" class="btn btn-block btn-xs btn-warning" onclick="increaseIndent();">&gt;&gt; Increase indentation</button>
+				<h5>
+					List style :
+					<div class="toggle-button">
+						<button class="btn btn-xs custom-button" onclick="changeListStyle('disc');">&#9899;</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle('circle');">&#9898;</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle('square');">&#9632;</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle('dash');">-</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle('decimal');">1.</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle('upper-roman');">I.</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle('lower-roman');">i.</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle('upper-alpha');">A.</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle('lower-alpha');">a.</button>
+					</div>
+				</h5>
+
+			</div>
+
+		</div>
+
+
+		<div class="col-sm-9 text-center" id="right">
+
+			<div id="page" class="droid">
+
+				<div class="row" style="margin-bottom:10px;">
+				<div class="col-sm-12">
+					<div id="info" style="text-align: center; padding-top:40px; padding-bottom: 15px;">
+						<p id="contentName" style="font-family: 'Amarante'; font-size: 60px;">Abc xyz</p>
+					</div>
+					<div id="contact">
+						<p>xyz.xyz@gmail.com | +91-9999999999 </p>
+					</div>
+				</div>
+				</div>
+
+				<div class="section" id="sectionProjects">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Facilities</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<li>
+						<div>
+						<div class="title">Project title</div>
+						<div class="time right">Ongoing</div>
+						</div>
+						<div>
+						<div class="mentor tab">Project Mentor</div>
+						</div>
+						<div>
+						<div class="text">Graphical interface to share files over institute's network.</div>
+						</div>
+					</li>
+					<li>
+						<div>
+						<div class="title">Project title</div>
+						<div class="time right">Apr 2016</div>
+						</div>
+						<div>
+						<div class="mentor tab">Dr. XYZ, Associate Professor, Dept. of XXX, IIT Guwahati</div>
+						<div class="link right">goo.gl/link</div>
+						</div>
+						<div>
+						<div class="text">Graphical interface to share files over institute's network.</div>
+						</div>
+					</li>
+					<li>
+						<div>
+						<div class="title">Project title</div>
+						<div class="time right">Jan 2016 - Mar 2016</div>
+						</div>
+						<div>
+						<div class="mentor tab">Mentor name</div>
+						<div class="link right">www.xyz.in</div>
+						</div>
+						<div>
+						<div class="text">Graphical interface to share files over institute's network.</div>
+						</div>
+					</li>
+					<li>
+						<div>
+						<div class="title">Project title</div>
+						<div class="time right">Feb 2016</div>
+						</div>
+						<div>
+						<div class="link right">goo.gl/link</div>
+						</div>
+						<div>
+						<div class="text">Graphical interface to share files over institute's network.</div>
+						</div>
+					</li>
+					<li>
+						<div>
+						<div class="title">Project title</div>
+						<div class="time right">Nov 2015</div>
+						</div>
+						<div>
+						<div class="mentor tab">Mentor name</div>
+						<div class="link right">github.com/link</div>
+						</div>
+						<div>
+						<div class="text">Graphical interface to share files over institute's network.</div>
+						</div>
+					</li>
+					<li>
+						<div>
+						<div class="title">Project title</div>
+						<div class="time right">Aug 2015 - Sep 2015</div>
+						</div>
+						<div>
+						<div class="text">Graphical interface to share files over institute's network.</div>
+						</div>
+					</li>
+					</ul>
+				</div>
+
+				<div class="section" id="sectionCurricular">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<p><strong>ADDRESS</strong></p>
+						<hr class="hr-below">
+					</div>
+				</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+
+</body>
+
+</html>
 
