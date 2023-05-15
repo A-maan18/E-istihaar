@@ -22,7 +22,6 @@
 		<div style="background-color: black;" class="col-sm-3 no-print" id="left">
 			<div style="background-color: black;" id="panel">
 					<h3 class="text-center" data-toggle="modal">E-Pamphlet</h3>
-             <!--   <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#usageModal">VIEW INSTRUCTIONS</button> -->
 				<button style="background-color: #301934;outline-color: #301934;border-color: white;"class="btn btn-block btn-success" onclick="window.print()">PRINT AS PDF</button>
 
 				<hr>
@@ -30,14 +29,6 @@
 				<h4 class="text-center">Template settings</h4>
 				<button id="defaultTemplateBtn" class="btn btn-block btn-danger" onclick="template('default');">Use Basic template</button>
 				<button id="customTemplateBtn" class="btn btn-block btn-default" onclick="template('custom');">Use custom template</button>
-				<h5>
-					Contact lines
-					<div class="toggle-button">
-						<div class="toggle-option" data-toggle="contact" id="contact3">2</div>
-						<div class="toggle-option selected" data-toggle="contact" id="contact4">3</div>
-						<div class="toggle-option" data-toggle="contact" id="contact5">4</div>
-					</div>
-				</h5>
 				<h5>
 					Horizontal margin
 					<div class="toggle-button">
@@ -87,41 +78,15 @@
 						</div>
 					</h5>
 					<br>
-					<h5>
-						Image
-						<div class="toggle-button">
-							<div class="toggle-option selected" data-toggle="image" id="imageShow">Show</div>
-							<div class="toggle-option" data-toggle="image" id="imageHide">Hide</div>
-						</div>
-					</h5>
 					<br>
 				</div>
 
-				<hr>
-
-				<h4 class="text-center">Lists and points</h4>
-				<button style="background-color: white; color: black; border-color: white;" class="btn btn-block btn-xs btn-success" onclick="insertList();">+ Insert sub-list</button>
-				<button style="background-color: white; color: black; border-color: white;" class="btn btn-block btn-xs btn-warning" onclick="decreaseIndent();">&lt;&lt; Decrese indentation</button>
-				<button style="background-color: white; color: black; border-color: white;" class="btn btn-block btn-xs btn-warning" onclick="increaseIndent();">&gt;&gt; Increase indentation</button>
 				<h5>
-					List style :
-					<div class="toggle-button">
-						<button class="btn btn-xs custom-button" onclick="changeListStyle('disc');">&#9899;</button>
-						<button class="btn btn-xs custom-button" onclick="changeListStyle('circle');">&#9898;</button>
-						<button class="btn btn-xs custom-button" onclick="changeListStyle('square');">&#9632;</button>
-						<button class="btn btn-xs custom-button" onclick="changeListStyle('dash');">-</button>
-						<button class="btn btn-xs custom-button" onclick="changeListStyle('decimal');">1.</button>
-						<button class="btn btn-xs custom-button" onclick="changeListStyle('upper-roman');">I.</button>
-						<button class="btn btn-xs custom-button" onclick="changeListStyle('lower-roman');">i.</button>
-						<button class="btn btn-xs custom-button" onclick="changeListStyle('upper-alpha');">A.</button>
-						<button class="btn btn-xs custom-button" onclick="changeListStyle('lower-alpha');">a.</button>
-					</div>
+					<a href="/FormPage/index.html" class="btn btn-sm btn-block btn-primary">Generate QR-Code</a>
 				</h5>
 
 			</div>
-
 		</div>
-
 
 		<div class="col-sm-9 text-center" id="right">
 
@@ -133,7 +98,7 @@
 						<p id="contentName" style="font-family: 'Amarante'; font-size: 60px;">Abc xyz</p>
 					</div>
 					<div id="contact">
-						<p>xyz.xyz@gmail.com | +91-9999999999 </p>
+						<p>xyz.xyz@gmail.com | +91-9999999999</p>
 					</div>
 				</div>
 				</div>
@@ -187,7 +152,7 @@
 						<div>
 					</li>
 					<div style="text-align: center; height:auto;max-width: 100%; ">
-						<img src="qrcode_a-maan18.github.io.png" alt="">
+						<img src="qrcode.png" alt="">
 					</div>
 					</ul>
 				</div>
